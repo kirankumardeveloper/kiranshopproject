@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+{%block content%}
+
+<div class="container">
+    <h3>contactus</h3>
+    <p>This is prestigious shop for dresses and garments.Here you can get any type of garements.Where all brands are available in our shop.We are providing genuine service to our customers for the past 20 years.
+    <br>
+    He is to contact number is:<b>9492818657</b></p>
+    <form name="form" action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">submit</button><br><br>
+    </form> 
+</div>
+{%endblock%}
+
+  

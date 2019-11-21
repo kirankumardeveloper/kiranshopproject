@@ -1,0 +1,36 @@
+{% extends 'base.html'%}
+{% block content %}
+<body style= background-image:url("/media/bg1.png")>
+
+<div class="container">
+<h3>All shirts are available in our shop</h3>
+<h3>Total price of the item:RS.{{tot_price}}</h3>
+<table width=100% border=1>
+{% for l in lst %}
+    <tr>
+    <td width=50%><br>
+    <img src='{{l.photo.url}}' width=100 height=120/>
+    </td>
+    <td width=50%><br>
+    Name of the shirts:{{l.name}}<br>
+    Description:{{l.desc}}<br>
+    Price:{{l.price}}<br>
+    
+    <a href='cart{{l.id}}'>Click to Add to Cart</a>
+    </td>
+    </tr>
+{% endfor %}
+</table>
+</div>
+</body>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
